@@ -26,19 +26,15 @@ loginForm.addEventListener('submit', function(event) {
 
     // Получаем значение из формы
     const username = loginForm.elements.username.value
-    const date = loginForm.elements.date.value
-    const sex = loginForm.elements.sex.value
     const password = loginForm.elements.password.value
 
 
     // Получаем сохраненные данные из localStorage
     const savedUsername = localStorage.getItem('username')
-    const savedDate = localStorage.getItem('date')
-    const savedSex = localStorage.getItem('sex')
     const savedPassword = localStorage.getItem('password')
 
     // Проверяем, что веденные данные совпадают с сохраненным
-    if (username === savedUsername && date === savedDate && sex === savedSex && password === savedPassword) {
+    if (username === savedUsername &&  password === savedPassword) {
         // Пользователь успешно авторизован
         alert('Вы успешно вошли!')
     } else {
